@@ -1,7 +1,7 @@
 ﻿#include<stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define R 100000000
+#define MAX 100000000
 
 int szukanie_slowa (char *tekst, char *slowo, int x, int y){
 
@@ -17,13 +17,13 @@ int szukanie_slowa (char *tekst, char *slowo, int x, int y){
 
 int main()
 {
-    char* tekst = malloc (R * sizeof(char));
+    char* tekst = malloc (MAX * sizeof(char));
     char* szukane_slowo = malloc (15 * sizeof (char));
     int rozmiar_pliku = 0, rozmiar_slowa = 0, il_wystapien = 0;
 
-    FILE *plik = fopen("/home/w/Pulpit/Studia/lab_classes_C/Zadanie_1/tekst.txt", "r");
+    FILE *plik = fopen("tekst.txt", "r");
 
-    if ((plik = fopen("/home/w/Pulpit/Studia/lab_classes_C/Zadanie_1/tekst.txt", "r")) == NULL) {
+    if ((plik = fopen("tekst.txt", "r")) == NULL) {
         printf ("Nie mogę otworzyć pliku!\n");
         exit(1);
     }
